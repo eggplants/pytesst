@@ -42,7 +42,11 @@ for i in range(len(d['level'])):
     cv2.rectangle(im, (x, y),
                   (x + w, y + h), (0, 255, 0), 2)
 
-cv2.imshow('img', im)
-cv2.waitKey(0)
+try:
+    cv2.imshow('img', im)
+    cv2.waitKey(0)
+except KeyboardInterrupt:
+    pass
+
 cv2.destroyAllWindows()
 A
